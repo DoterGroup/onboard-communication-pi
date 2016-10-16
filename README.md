@@ -1,7 +1,9 @@
-* README
+# README
+
 Small python app to send data from sensors and drone telemetry.
 
-* Setup
+# Setup
+
 to enable i2c & SPI
 
 `sudo raspi-config`
@@ -56,6 +58,7 @@ The MPL3115A2 requires a proper repeated start command in it's I2C communication
 
 
 # Testing
+
 List avalible addresses
 
 `i2cdetect -y 1`
