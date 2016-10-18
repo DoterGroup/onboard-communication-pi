@@ -8,9 +8,13 @@ to enable i2c & SPI
 
 `sudo raspi-config`
 
-`sudo apt-get update sudo apt-get upgrade`
+`sudo apt-get update`
 
-`sudo apt-get install i2c-tools sudo adduser pi i2c`
+`sudo apt-get upgrade`
+
+`sudo apt-get install i2c-tools`
+
+`sudo adduser pi i2c`
 
 Pin 3 (SDA) -> Arduino A4 (SDA)
 Pin 5 (SCL) -> Arduino A5 (SCL)
@@ -25,7 +29,9 @@ UART python support
 
 Python libs and Mavlink Proxy
 
-`sudo apt-get install screen python-wxgtk2.8 python-matplotlib python-opencv python-pip python-numpy python-dev libxml2-dev libxslt-dev sudo pip install pymavlink sudo pip install mavproxy`
+`sudo apt-get install screen python-wxgtk2.8 python-matplotlib python-opencv python-pip python-numpy python-dev libxml2-dev libxslt-dev`
+
+`sudo pip install pymavlink sudo pip install mavproxy`
 
 `sudo -s`
 
@@ -46,7 +52,9 @@ DroneKit framework
 
 Install DHT22 sensor libraries
 
-`sudo apt-get update sudo apt-get install build-essential python-dev`
+`sudo apt-get update`
+
+`sudo apt-get install build-essential python-dev`
 
 `git clone https://github.com/adafruit/Adafruit_Python_DHT.git cd Adafruit_Python_DHT`
 
