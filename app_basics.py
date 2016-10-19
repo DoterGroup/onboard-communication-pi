@@ -7,6 +7,7 @@ import sys
 import time
 import argparse 
 import json
+import random
 
 import smbus
 import serial
@@ -132,10 +133,10 @@ def main():
             co_level = random.randrange(200)
 
 
-            data = '[' + str(arm) + ',' + str(mode) + ',' + str(batt) + ',' + str(lat) + ',' + str(lon) + ',' + str(alt) + ',' + str(pressure+p_decimal) + ',' + str(celsius) + ',' + str(humidity) + ',' + str(temperature) + ',' + str(ground_speed) + ',' + str(co_level) + ']'
+            data = '[' + str(arm) + ',' + str(mode) + ',' + str(batt) + ',' + str(lat) + ',' + str(lon) + ',' + str(alt) + ',' + str(pressure) + ',' + str(celsius) + ',' + str(humidity) + ',' + str(temperature) + ',' + str(ground_speed) + ',' + str(co_level) + ']'
 
             ser.write(str(data) + '\n')
-            time.sleep(0.1)
+            time.sleep(3)
 
             callback = ''
 
