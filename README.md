@@ -31,7 +31,9 @@ Python libs and Mavlink Proxy
 
 `sudo apt-get install screen python-wxgtk2.8 python-matplotlib python-opencv python-pip python-numpy python-dev libxml2-dev libxslt-dev`
 
-`sudo pip install pymavlink sudo pip install mavproxy`
+`sudo pip install pymavlink`
+
+`sudo pip install mavproxy`
 
 `sudo -s`
 
@@ -48,7 +50,9 @@ DroneKit framework
 
 `sudo pip install droneapi echo "module load droneapi.module.api" >> ~/.mavinit.scr`
 
-`pip install dronekit pip install dronekit-sitl`
+`pip install dronekit`
+
+`pip install dronekit-sitl`
 
 Install DHT22 sensor libraries
 
@@ -62,8 +66,14 @@ Install DHT22 sensor libraries
 
 The MPL3115A2 requires a proper repeated start command in it's I2C communication, this line is needed every startup.
 
-`sudo su - echo -n 1 > /sys/module/i2c_bcm2708/parameters/combined exit`
+```
+sudo su - 
 
+echo -n 1 > /sys/module/i2c_bcm2708/parameters/combined 
+
+exit
+
+```
 
 # Testing
 
@@ -74,6 +84,14 @@ List avalible addresses
 Find your USB device
 
 `ls /dev/tty*`
+
+# Init Apps at rapi startup
+
+`sudo cronetab -e`
+
+at the end of file
+
+@reboot 
 
 # Troubleshooting
 
