@@ -103,7 +103,9 @@ def set_mode(mode):
     print "Change mode: " + str(mode)
 
 def takeoff(t):
-    vehicle.commands.takeoff(t)
+    vehicle.armed = True
+    vehicle.mode = VehicleMode("GUIDED")
+    vehicle.simple_takeoff(t)
     print "takeoff at " + str(t)
 
 # Function to read SPI data from MCP3008 chip
@@ -225,6 +227,12 @@ def main():
                 print "%s:%s" % (str(command[0]), str(command[1]))
                 if str(command[0]) == 'mode':
                     set_mode(int(command[1]))
+
+                if str(command[0]) == 'arm':
+                    set_arm(int(command[1]))
+
+                if str(command[0]) == 'takeoff':
+                    takeoff(int(command[1]))
 
                 ser.flush()
 
