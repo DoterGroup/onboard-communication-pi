@@ -2,6 +2,10 @@
 
 Small python app to send data from sensors and drone telemetry.
 
+# Connection Diagram
+
+![diagram](DroneLayout.png)
+
 # Setup
 
 to enable i2c & SPI
